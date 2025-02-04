@@ -1,140 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-    <style>
-body {
-    background-color: #f8f9fa;
-}
-
-.container {
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #007bff;
-}
-
-#experiencedFields, #fresherFields {
-    display: none;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h2 class="text-center">Job Application Form</h2>
+    <div class="container">
+        <h2>Job Application Form</h2>
         <form id="jobApplicationForm">
-            <div class="row">
-                <div class="col-md-6">
-                    <label class="form-label">Job Role</label>
-                    <select name="job_role" class="form-control" required>
-                        <option value="">Select Role</option>
-                        <option value="Software Engineer">Software Engineer</option>
-                        <option value="Web Developer">Web Developer</option>
-                        <option value="Data Analyst">Data Analyst</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">First Name</label>
-                    <input type="text" name="first_name" class="form-control" required>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Last Name</label>
-                    <input type="text" name="last_name" class="form-control" required>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" required>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Phone Number</label>
-                    <input type="text" name="phone" class="form-control" required>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Date of Birth</label>
-                    <input type="date" name="dob" class="form-control" required>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Gender</label>
-                    <select name="gender" class="form-control" required>
-                        <option value="">Select Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">PAN Number</label>
-                    <input type="text" name="pan" class="form-control" required>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Aadhaar Number</label>
-                    <input type="text" name="aadhaar" class="form-control" required>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Experience</label><br>
-                    <input type="radio" name="experience" value="Experienced" id="exp" required> Experienced
-                    <input type="radio" name="experience" value="Fresher" id="fresh" required> Fresher
-                </div>
+            <label>Job Role</label>
+            <select name="job_role" required>
+                <option value="">Select Role</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Data Analyst">Data Analyst</option>
+            </select>
 
-                <div id="experiencedFields" class="col-md-12 mt-3">
-                    <label class="form-label">Years of Experience</label>
-                    <input type="number" name="years_of_experience" class="form-control">
-                    <label class="form-label">Current CTC</label>
-                    <input type="text" name="current_ctc" class="form-control">
-                </div>
+            <label>First Name</label>
+            <input type="text" name="first_name" required>
 
-                <div id="fresherFields" class="col-md-12 mt-3">
-                    <label class="form-label">Expected CTC</label>
-                    <input type="text" name="expected_ctc" class="form-control">
-                </div>
+            <label>Last Name</label>
+            <input type="text" name="last_name" required>
 
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Resume (PDF)</label>
-                    <input type="file" name="resume" class="form-control" accept=".pdf" required>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label class="form-label">Photo (JPG, PNG)</label>
-                    <input type="file" name="photo" class="form-control" accept="image/*" required>
-                </div>
+            <label>Email</label>
+            <input type="email" name="email" required>
 
-                <div class="col-md-12 text-center mt-4">
-                    <button type="submit" class="btn btn-primary">Submit Application</button>
-                </div>
+            <label>Phone Number</label>
+            <input type="text" name="phone" required>
+
+            <label>Date of Birth</label>
+            <input type="date" name="dob" required>
+
+            <label>Gender</label>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>PAN Number</label>
+            <input type="text" name="pan" required>
+
+            <label>Aadhaar Number</label>
+            <input type="text" name="aadhaar" required>
+
+            <label>Experience</label>
+            <input type="radio" name="experience" value="Experienced" id="exp" required> Experienced
+            <input type="radio" name="experience" value="Fresher" id="fresh" required> Fresher
+
+            <div id="experiencedFields">
+                <label>Years of Experience</label>
+                <input type="number" name="years_of_experience">
+                <label>Current CTC</label>
+                <input type="text" name="current_ctc">
             </div>
+
+            <div id="fresherFields">
+                <label>Expected CTC</label>
+                <input type="text" name="expected_ctc">
+            </div>
+
+            <label>Resume (PDF)</label>
+            <input type="file" name="resume" accept=".pdf" required>
+
+            <label>Photo (JPG, PNG)</label>
+            <input type="file" name="photo" accept="image/*" required>
+
+            <button type="submit">Submit Application</button>
         </form>
     </div>
-
-    <script>document.addEventListener("DOMContentLoaded", function () {
-    let expRadio = document.getElementById("exp");
-    let freshRadio = document.getElementById("fresh");
-    let experiencedFields = document.getElementById("experiencedFields");
-    let fresherFields = document.getElementById("fresherFields");
-
-    expRadio.addEventListener("change", function () {
-        if (expRadio.checked) {
-            experiencedFields.style.display = "block";
-            fresherFields.style.display = "none";
-        }
-    });
-
-    freshRadio.addEventListener("change", function () {
-        if (freshRadio.checked) {
-            experiencedFields.style.display = "none";
-            fresherFields.style.display = "block";
-        }
-    });
-
-    document.getElementById("jobApplicationForm").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission for testing
-        alert("Form submitted successfully!");
-    });
-});
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
